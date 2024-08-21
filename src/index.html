@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#E0F1E7] flex items-center justify-center my-20">
+  <div class="bg-white px-10 py-5 rounded-md">
+    <form action="#" id="myForm">
+      <h1 class="font-bold text-2xl mb-5">Contact Us</h1>
+      <div class="flex gap-3 mb-5">
+        <div>
+          <label for="firstname" class="text-sm">First Name *</label>
+          <input type="text" id="firstname" class="block border border-slate-300 outline-none w-[220px] rounded-md py-1 mt-2 pl-5 hover:border-green-300 cursor-pointer active:border-green-300" />
+          <div id="firstNameError" style="color: red;" class="text-xs mt-2"></div>
+        </div>
+        
+        <div>
+          <label for="lastname" class="text-sm">Last Name *</label>
+          <input type="text" id="lastname" class="block border border-slate-300 outline-none w-[220px] rounded-md py-1 mt-2 pl-5 hover:border-green-300 cursor-pointer" />
+          <div id="lastNameError" style="color: red;" class="text-xs mt-2"></div>
+        </div>
+      </div>
+      
+      <div class=" mb-5">
+        <label for="email" class="text-sm">Email Address *</label>
+        <input type="email" id="email" class="block border border-slate-300 outline-none w-full rounded-md py-1 mt-2 pl-5 hover:border-green-300 cursor-pointer" />
+        <div id="emailError" style="color: red;" class="text-xs mt-2"></div>
+      </div>
+
+      <label for="radio" class="text-sm">Query Type *</label>
+      <div class="mb-5">
+        <div class="flex gap-3">
+          <div class="border border-slate-300 outline-none w-full rounded-md py-1 pl-5 mt-2 flex gap-3 items-center">
+            <input type="radio" name="radio" id="generalEnquiry" class="accent-emerald-100" />
+            <label for="generalEnquiry" class="text-sm">General Enquiry</label>
+          </div>
+  
+          <div class="border border-slate-300 outline-none w-full rounded-md py-1 pl-5 mt-2 flex gap-3 items-center">
+            <input type="radio" name="radio" id="supportRequest" />
+            <label for="supportRequest" class="text-sm">Support request</label>
+        </div>
+        </div>
+
+        <div id="queryError" style="color: red;" class="text-xs mt-2"></div>
+      </div>
+
+      <div class=" mb-5">
+        <label for="textarea" class="text-sm">Message *</label>
+        <textarea name="text" id="textarea" class="w-full border border-slate-300 h-[80px] rounded-md mt-2 outline-none pl-5"></textarea>
+        <div id="textError" style="color: red;" class="text-xs mt-2"></div>
+      </div>
+      
+
+      <div class="mb-5">
+        <div class=" flex gap-4">
+          <input type="checkbox" id="consent" />
+          <label for="consent" class="text-sm">I consent to being contacted by the team *</label>
+        </div>
+        <div id="consentError" style="color: red;" class="text-xs mt-2"></div>
+      </div>
+
+      <button type="submit" class="bg-[#0C7D69] w-full rounded-md py-2 text-sm text-white">Submit</button>
+      <div id="errorMessage" style="color: red;"></div> <!-- Single error message container -->
+    </form>
+  </div>
+
+  <script src="../index.js"></script>
+</body>
+</html>
