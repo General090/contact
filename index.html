@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -6,8 +7,9 @@
   <link href="./output.css" rel="stylesheet">
   <title>Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/12324eab9b.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-[#E0F1E7] flex items-center justify-center lg:my-20 md:my-52 sm:mt-28">
+<body class="bg-[#E0F1E7] flex items-center justify-center lg:my-24 md:my-40 sm:my-32">
   <div class="bg-white px-10 py-5 rounded-md">
     <form action="#" id="myForm">
       <h1 class="font-bold text-2xl mb-5">Contact Us</h1>
@@ -34,7 +36,7 @@
       <label for="radio" class="text-sm">Query Type *</label>
       <div class="mb-5">
         <div class="md:flex gap-3">
-          <div class="border border-slate-300 outline-none w-full rounded-md py-1 pl-5 mt-2 flex gap-3 items-center">
+          <div class="border border-slate-300 outline-none w-full rounded-md py-1 pl-5 mt-2 flex gap-3 items-center lg:mb-0 md:mb-0 sm:mb-5">
             <input type="radio" name="radio" id="generalEnquiry" class="bg-green-900" />
             <label for="generalEnquiry" class="text-sm cursor-pointer ">General Enquiry</label>
           </div>
@@ -63,11 +65,22 @@
         <div id="consentError" style="color: red;" class="text-xs mt-2"></div>
       </div>
 
-      <button type="submit" class="bg-[#0C7D69] w-full rounded-md py-2 text-sm text-white hover:bg-green-950">Submit</button>
+      <button type="submit" class="bg-[#0C7D69] w-full rounded-md py-2 text-sm text-white hover:bg-green-950" id="showAlert">Submit</button>
       <div id="errorMessage" style="color: red;"></div> <!-- Single error message container -->
     </form>
   </div>
 
+  <div id="customAlert" class="fixed top-0 md:left-1/2 md:transform -translate-x-1/2 hidden sm:left-[40%]">
+    <div class="bg-black p-6 rounded-lg shadow-lg md:w-[100%] text-center sm:w-[130%] mt-1">
+       <div class="flex">
+        <div class="rounded-full border border-white text-white w-5 h-5 mr-1">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <p class="mb-4 text-white">Message sent!</p>
+       </div>
+       <p class="text-white text-sm">Thanks for completing the form, We'll be in touch soon!</p> 
+    </div>
+  </div>
   <script src="../index.js"></script>
 </body>
 </html>

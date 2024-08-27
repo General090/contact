@@ -83,13 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
 
-        // Optionally handle form submission if valid
-        if (isValid === true) {
-            alert("Thanks for completing the form, We'll be in touch.");
-            // You can submit the form here or handle success
+        if (isValid == false){
+            alert("fill in your details")
         }
+        
+            
+    });
+
+    document.getElementById("showAlert").addEventListener("click", function() {
+        document.getElementById("customAlert").classList.remove("hidden");
     });
 });
+
+
+
+    
 
 
 
